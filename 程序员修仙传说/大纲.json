@@ -1,0 +1,378 @@
+{
+  "story_arc": {
+    "第一卷：入门试炼": {
+      "range": "1-15",
+      "theme": "穿越适应 + 杂灵根逆袭",
+      "key_events": [
+        "第1章：穿越醒来，发现五行杂灵根",
+        "第3章：得知父亲战死，继承内门名额",
+        "第5章：温如玉真面目暴露",
+        "第8章：第一次秘境探索",
+        "第12章：编程思维初显威",
+        "第15章：卷末高潮 - 内门大比初选"
+      ]
+    },
+    "第二卷：内门风云": {
+      "range": "16-30",
+      "theme": "内门立足 + 金手指成型",
+      "key_events": [
+        "第16章：正式入内门，分配洞府",
+        "第20章：发现'代码即功法'的秘密",
+        "第25章：首次独立完成任务",
+        "第28章：与温如玉正面冲突",
+        "第30章：卷末高潮 - 宗门危机"
+      ]
+    },
+    "第三卷：修仙算法": {
+      "range": "31-50",
+      "theme": "算法修仙 + 崭露头角",
+      "key_events": [
+        "第31章：提出'灵气编译器'概念",
+        "第35章：改良基础功法，震惊长老",
+        "第40章：第一次跨宗门交流",
+        "第45章：父亲死亡的真相浮现",
+        "第50章：第一卷大高潮 - 以算法破万法"
+      ]
+    }
+  },
+  "chapters": [
+    {
+      "num": 1,
+      "title": "这里是哪里？",
+      "hook": "穿越发现杂灵根"
+    },
+    {
+      "num": 2,
+      "title": "尤师兄，您昏睡三天了",
+      "hook": "被质疑浪费资源"
+    },
+    {
+      "num": 3,
+      "title": "你父亲虚空乱流断后，身死道消了",
+      "hook": "父亲战死真相"
+    },
+    {
+      "num": 4,
+      "title": "那五行杂灵根，或许就不是废材了？",
+      "hook": "编程思维突破"
+    },
+    {
+      "num": 5,
+      "title": "我的...小废物。",
+      "hook": "温如玉真面目"
+    },
+    {
+      "num": 6,
+      "title": "待定",
+      "hook": "继续展开"
+    },
+    {
+      "num": 7,
+      "title": "待定",
+      "hook": "继续展开"
+    },
+    {
+      "num": 8,
+      "title": "待定",
+      "hook": "继续展开"
+    },
+    {
+      "num": 9,
+      "title": "待定",
+      "hook": "继续展开"
+    },
+    {
+      "num": 10,
+      "title": "待定",
+      "hook": "继续展开"
+    },
+    {
+      "num": 11,
+      "title": "待定",
+      "hook": "继续展开"
+    },
+    {
+      "num": 12,
+      "strand": "Quest",
+      "title": "（爆点台词）",
+      "hook": "第一次用算法优化引气",
+      "note": "展示金手指雏形"
+    },
+    {
+      "num": 13,
+      "strand": "Fire",
+      "title": "（爆点台词）",
+      "hook": "同门态度微妙变化",
+      "note": "人际关系"
+    },
+    {
+      "num": 14,
+      "strand": "Constellation",
+      "title": "（爆点台词）",
+      "hook": "秘境开启",
+      "note": "世界观扩展"
+    },
+    {
+      "num": 15,
+      "strand": "Quest",
+      "title": "（爆点台词）",
+      "hook": "内门大比初选第一战",
+      "note": "卷末高潮"
+    },
+    {
+      "num": 16,
+      "strand": "Quest",
+      "title": "（爆点台词）",
+      "hook": "入内门，新开始",
+      "note": "新地图"
+    },
+    {
+      "num": 17,
+      "strand": "Fire",
+      "title": "（爆点台词）",
+      "hook": "新同门/新对手",
+      "note": "人际关系"
+    },
+    {
+      "num": 18,
+      "strand": "Constellation",
+      "title": "（爆点台词）",
+      "hook": "洞府探秘",
+      "note": "世界观"
+    },
+    {
+      "num": 19,
+      "strand": "Quest",
+      "title": "（爆点台词）",
+      "hook": "第一次任务",
+      "note": "实力展示"
+    },
+    {
+      "num": 20,
+      "strand": "Quest",
+      "title": "（爆点台词）",
+      "hook": "发现代码即功法",
+      "note": "金手指升级"
+    },
+    {
+      "num": 21,
+      "strand": "Fire",
+      "title": "（爆点台词）",
+      "hook": "师父的关注",
+      "note": "贵人出现"
+    },
+    {
+      "num": 22,
+      "strand": "Quest",
+      "title": "（爆点台词）",
+      "hook": "功法改良初尝试",
+      "note": "能力展示"
+    },
+    {
+      "num": 23,
+      "strand": "Quest",
+      "title": "（爆点台词）",
+      "hook": "小比试",
+      "note": "打脸"
+    },
+    {
+      "num": 24,
+      "strand": "Constellation",
+      "title": "（爆点台词）",
+      "hook": "宗门秘闻",
+      "note": "世界观"
+    },
+    {
+      "num": 25,
+      "strand": "Quest",
+      "title": "（爆点台词）",
+      "hook": "独立任务成功",
+      "note": "成长"
+    },
+    {
+      "num": 26,
+      "strand": "Fire",
+      "title": "（爆点台词）",
+      "hook": "温如玉的阴谋",
+      "note": "反派动作"
+    },
+    {
+      "num": 27,
+      "strand": "Quest",
+      "title": "（爆点台词）",
+      "hook": "陷落入险",
+      "note": "危机"
+    },
+    {
+      "num": 28,
+      "strand": "Quest",
+      "title": "（爆点台词）",
+      "hook": "正面冲突",
+      "note": "小高潮"
+    },
+    {
+      "num": 29,
+      "strand": "Fire",
+      "title": "（爆点台词）",
+      "hook": "盟友出现",
+      "note": "人际关系"
+    },
+    {
+      "num": 30,
+      "strand": "Quest",
+      "title": "（爆点台词）",
+      "hook": "宗门危机",
+      "note": "卷末大高潮"
+    },
+    {
+      "num": 31,
+      "strand": "Quest",
+      "title": "（爆点台词）",
+      "hook": "提出灵气编译器",
+      "note": "核心概念登场"
+    },
+    {
+      "num": 32,
+      "strand": "Constellation",
+      "title": "（爆点台词）",
+      "hook": "修仙界的反应",
+      "note": "世界观冲击"
+    },
+    {
+      "num": 33,
+      "strand": "Fire",
+      "title": "（爆点台词）",
+      "hook": "质疑与嘲笑",
+      "note": "情绪铺垫"
+    },
+    {
+      "num": 34,
+      "strand": "Quest",
+      "title": "（爆点台词）",
+      "hook": "第一次证明",
+      "note": "小爽点"
+    },
+    {
+      "num": 35,
+      "strand": "Quest",
+      "title": "（爆点台词）",
+      "hook": "改良功法震惊长老",
+      "note": "中爽点"
+    },
+    {
+      "num": 36,
+      "strand": "Constellation",
+      "title": "（爆点台词）",
+      "hook": "其他宗门的注意",
+      "note": "地图扩展"
+    },
+    {
+      "num": 37,
+      "strand": "Fire",
+      "title": "（爆点台词）",
+      "hook": "新的对手",
+      "note": "竞争"
+    },
+    {
+      "num": 38,
+      "strand": "Quest",
+      "title": "（爆点台词）",
+      "hook": "准备交流大会",
+      "note": "铺垫"
+    },
+    {
+      "num": 39,
+      "strand": "Constellation",
+      "title": "（爆点台词）",
+      "hook": "跨宗门初体验",
+      "note": "世界观"
+    },
+    {
+      "num": 40,
+      "strand": "Quest",
+      "title": "（爆点台词）",
+      "hook": "交流大会展露头角",
+      "note": "爽点"
+    },
+    {
+      "num": 41,
+      "strand": "Fire",
+      "title": "（爆点台词）",
+      "hook": "各方拉拢",
+      "note": "人际关系"
+    },
+    {
+      "num": 42,
+      "strand": "Constellation",
+      "title": "（爆点台词）",
+      "hook": "父亲相关的线索",
+      "note": "主线推进"
+    },
+    {
+      "num": 43,
+      "strand": "Quest",
+      "title": "（爆点台词）",
+      "hook": "调查父亲死因",
+      "note": "悬疑"
+    },
+    {
+      "num": 44,
+      "strand": "Quest",
+      "title": "（爆点台词）",
+      "hook": "阴谋浮现",
+      "note": "危机升级"
+    },
+    {
+      "num": 45,
+      "strand": "Quest",
+      "title": "（爆点台词）",
+      "hook": "真相大白",
+      "note": "情感高潮"
+    },
+    {
+      "num": 46,
+      "strand": "Fire",
+      "title": "（爆点台词）",
+      "hook": "复仇决心",
+      "note": "动机强化"
+    },
+    {
+      "num": 47,
+      "strand": "Quest",
+      "title": "（爆点台词）",
+      "hook": "实力提升",
+      "note": "准备"
+    },
+    {
+      "num": 48,
+      "strand": "Constellation",
+      "title": "（爆点台词）",
+      "hook": "各方势力",
+      "note": "格局"
+    },
+    {
+      "num": 49,
+      "strand": "Quest",
+      "title": "（爆点台词）",
+      "hook": "最终对决前",
+      "note": "铺垫"
+    },
+    {
+      "num": 50,
+      "strand": "Quest",
+      "title": "（爆点台词）",
+      "hook": "以算法破万法",
+      "note": "第一卷终极大高潮"
+    }
+  ],
+  "rules": {
+    "strand_ratio": {
+      "Quest": 0.6,
+      "Fire": 0.2,
+      "Constellation": 0.2
+    },
+    "chapter_length": "2500-3500字",
+    "hook_placement": "章末必须有钩子",
+    "continuity": "严禁第X章引用"
+  }
+}
