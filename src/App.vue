@@ -124,10 +124,8 @@ const totalChapters = 20 // 已写章节数
 
 // 初始化章节列表
 onMounted(async () => {
-  chapters.value = Array.from({ length: totalChapters }, (_, i) => ({
-    num: i + 1,
-    title: getChapterTitle(i + 1)
-  }))
+  // 动态加载章节标题
+  await loadChapterTitles()
   
   // 预加载所有章节用于搜索
   await preloadAllChapters()
@@ -138,16 +136,30 @@ onMounted(async () => {
   }
 })
 
-// 获取章节标题（简化版，实际可以从文件解析）
-function getChapterTitle(num) {
-  const titles = {
-    1: '穿越', 2: '杂灵根', 3: '面试碰壁', 4: '三皇子', 5: '算法，这才是我的强项',
-    6: '内门试炼', 7: '神秘玉简', 8: '五灵淬体', 9: '宗门大比', 10: '崭露锋芒',
-    11: '丹田烙阵', 12: '首次轮转尝试', 13: '观察别人的术法', 14: '头痛欲裂',
-    15: '准备实验', 16: '不对劲的火球', 17: '头痛越来越频繁', 18: '刘坤又来了',
-    19: '大师兄的邀请', 20: '梦中的声音'
+// 从 Markdown 内容提取标题
+function extractTitle(content, num) {
+  const match = content.match(/^#\s*(.+)$/m)
+  return match ? match[1].trim() : `第${num}章`
+}
+
+// 动态加载章节标题
+async function loadChapterTitles() {
+  const loadedChapters = []
+  for (let i = 1; i <= totalChapters; i++) {
+    try {
+      const response = await fetch(`程序员修仙传说/正文/第${String(i).padStart(4, '0')}章.md`)
+      if (response.ok) {
+        const text = await response.text()
+        loadedChapters.push({
+          num: i,
+          title: extractTitle(text, i)
+        })
+      }
+    } catch (e) {
+      loadedChapters.push({ num: i, title: `第${i}章` })
+    }
   }
-  return titles[num] || `第${num}章`
+  chapters.value = loadedChapters
 }
 
 // 预加载所有章节
