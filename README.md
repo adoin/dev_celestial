@@ -1,0 +1,6 @@
+- 架构与模块：`docs/architecture.md`
+- 命令详解：`docs/commands.md`
+- RAG 与配置：`docs/rag-and-config.md`
+- 题材模板：`docs/genres.md`
+- 运维与恢复：`docs/operations.md`
+- 文档导航：`docs/README.md`
