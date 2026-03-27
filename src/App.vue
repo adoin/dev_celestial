@@ -8,7 +8,7 @@
           v-model="searchQuery"
           @input="handleSearch"
           class="search-box"
-          placeholder="搜索全文..."
+          placeholder="搜索章节..."
         />
       </div>
       
@@ -31,12 +31,12 @@
       <div v-if="searchResults.length" class="search-results">
         <div
           v-for="result in searchResults"
-          :key="result.chapter + '-' + result.index"
+          :key="result.chapter"
           class="search-result-item"
           @click="goToChapter(result.chapter)"
         >
           <span>第{{ result.chapter }}章</span>: 
-          <span v-html="result.highlight"></span>
+          <span v-html="result.highlight || result.title"></span>
         </div>
       </div>
       
@@ -252,8 +252,8 @@ function toggleTheme() {
   localStorage.setItem('theme', isDark.value ? 'dark' : 'light')
 }
 
-// 搜索功能 - 按需搜索
-async function handleSearch() {
+// 搜索功能 - 只搜索章节名
+function handleSearch() {
   const query = searchQuery.value.trim()
   if (!query) {
     searchResults.value = []
@@ -261,22 +261,29 @@ async function handleSearch() {
   }
   
   const results = []
-  // 只搜索已加载的章节或前30章
-  for (let i = 1; i <= Math.min(totalChapters, 30); i++) {
-    try {
-      const response = await fetch(`程序员修仙传说/正文/第${String(i).padStart(4, '0')}章.md`)
-      if (response.ok) {
-        const text = await response.text()
-        const lines = text.split('\n')
-        lines.forEach((line, index) => {
-          if (line.toLowerCase().includes(query.toLowerCase())) {
-            const highlighted = line.replace(
+  const lowerQuery = query.toLowerCase()
+  
+  // 在章节列表中搜索章节号或章节标题
+  chapters.value.forEach(chapter => {
+    const numMatch = chapter.num.toString().includes(query)
+    const titleMatch = chapter.title && chapter.title.toLowerCase().includes(lowerQuery)
+    
+    if (numMatch || titleMatch) {
+      results.push({
+        chapter: chapter.num,
+        title: chapter.title,
+        highlight: titleMatch 
+          ? chapter.title.replace(
               new RegExp(query, 'gi'),
               match => `<span class="highlight">${match}</span>`
             )
-            results.push({
-              chapter: i,
-              index,
+          : chapter.title
+      })
+    }
+  })
+  
+  searchResults.value = results
+}
               text: line,
               highlight: highlighted
             })
