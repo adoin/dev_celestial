@@ -42,7 +42,11 @@
       
       <!-- 章节列表 - 虚拟滚动 -->
       <div v-show="!searchResults.length" class="chapter-list-container">
+        <div v-if="sortedChapters.length === 0" class="chapter-loading">
+          加载章节列表...
+        </div>
         <VirtualList
+          v-else
           :items="sortedChapters"
           :item-height="44"
           :buffer="5"
@@ -54,7 +58,7 @@
             @click="goToChapter(item.num)"
           >
             <span class="chapter-num">第{{ item.num }}章</span>
-            <span class="chapter-title-text">{{ item.title }}</span>
+            <span class="chapter-title-text">{{ item.title || '加载中...' }}</span>
           </div>
         </VirtualList>
       </div>

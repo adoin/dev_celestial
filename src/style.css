@@ -32,6 +32,33 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
+/* 侧边栏基础样式 */
+.sidebar {
+  width: 320px;
+  min-width: 320px;
+  max-width: 320px;
+  background: var(--sidebar-bg);
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* 章节列表容器 */
+.chapter-list-container {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.chapter-loading {
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--text-color);
+  opacity: 0.6;
+  font-size: 14px;
+}
+
 /* 侧边栏样式 */
 .sidebar-header {
   padding: 20px;
