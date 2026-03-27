@@ -305,7 +305,7 @@ watch(isDark, (val) => {
 </script>
 
 <style>
-/* 响应式布局 */
+/* 基础布局 */
 #app {
   display: flex;
   height: 100vh;
@@ -316,14 +316,36 @@ watch(isDark, (val) => {
 .sidebar {
   width: 320px;
   min-width: 320px;
+  max-width: 320px;
   background: var(--sidebar-bg);
   border-right: 1px solid var(--border-color);
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
+  overflow: hidden;
 }
 
-/* 移动端侧边栏 */
+/* 主内容区 - 占满剩余空间 */
+.main-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--bg-color);
+}
+
+/* PC端侧边栏折叠 */
+@media (min-width: 769px) {
+  .sidebar-collapsed .sidebar {
+    width: 0;
+    min-width: 0;
+    max-width: 0;
+    border-right: none;
+  }
+}
+
+/* 移动端 */
 @media (max-width: 768px) {
   .sidebar {
     position: fixed;
@@ -332,10 +354,9 @@ watch(isDark, (val) => {
     bottom: 0;
     z-index: 100;
     transform: translateX(-100%);
-  }
-  
-  .sidebar-collapsed .sidebar {
-    transform: translateX(-100%);
+    width: 280px;
+    min-width: 280px;
+    max-width: 280px;
   }
   
   #app:not(.sidebar-collapsed) .sidebar {
@@ -348,24 +369,6 @@ watch(isDark, (val) => {
     background: rgba(0,0,0,0.5);
     z-index: 99;
   }
-}
-
-/* PC端侧边栏切换 */
-@media (min-width: 769px) {
-  .sidebar-collapsed .sidebar {
-    width: 0;
-    min-width: 0;
-    overflow: hidden;
-  }
-}
-
-/* 主内容区 */
-.main-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  min-width: 0; /* 关键：防止内容溢出 */
-  overflow: hidden;
 }
 
 /* 章节列表容器 */

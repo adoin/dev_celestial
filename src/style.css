@@ -258,10 +258,12 @@ body {
 }
 
 .reader-content {
-  max-width: 800px;
+  width: 100%;
+  max-width: 900px;
   margin: 0 auto;
   font-size: 18px;
   line-height: 1.8;
+  padding: 0 20px;
 }
 
 .reader-content h1 {
@@ -401,17 +403,18 @@ body {
 
 @media (min-width: 1200px) {
   .sidebar {
-    width: 360px;
-    min-width: 360px;
+    width: 340px;
+    min-width: 340px;
   }
   
   .reader-container {
-    padding: 50px 40px;
+    padding: 40px;
   }
   
   .reader-content {
     font-size: 19px;
-    max-width: 850px;
+    max-width: 1000px;
+    padding: 0 40px;
   }
 }
 
