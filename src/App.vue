@@ -284,17 +284,6 @@ function handleSearch() {
   
   searchResults.value = results
 }
-              text: line,
-              highlight: highlighted
-            })
-          }
-        })
-      }
-    } catch (e) {}
-  }
-  
-  searchResults.value = results.slice(0, 20)
-}
 
 // 计算属性
 const sortedChapters = computed(() => {
